@@ -1,0 +1,327 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;
+
+400;500;700&display=swap);.orenjudul {
+  font-weight: 700;
+  font-size: 3rem;
+  color: #ED7D2B;
+  line-height: 1em;
+}
+
+.birusubjudul {
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #2E3552;
+  line-height: 1.5;
+}
+
+.tombol {
+  display: inline-block;
+  background-color: #ED7D2B;
+  color: white;
+  border-radius: 2em;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: 0.4s ease;
+}
+
+.tombol:hover {
+  color: #ED7D2B;
+  border: 1px solid #ED7D2B;
+  background-color: transparent;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.bg {
+  float: right;
+  width: 57vmax;
+  height: auto;
+}
+
+.costum-nav {
+  background-color: #EBF3FA;
+}
+
+.costum-nav .navbar-brand img {
+  width: 40px;
+  height: 40px;
+  margin-top: -5px;
+}
+
+.costum-nav .navbar-brand span {
+  color: white;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-left: 0.4em;
+}
+
+.costum-nav #navbarNav .navbar-nav .lengkung {
+  border-radius: 30%;
+}
+
+.costum-nav #navbarNav .navbar-nav .nav-item .nav-link {
+  color: white;
+  font-weight: 400;
+  margin-left: 1em;
+  transition: 0.3s color ease;
+}
+
+.costum-nav #navbarNav .navbar-nav .nav-item .nav-link:hover {
+  color: #75370a;
+}
+
+.costum-nav #navbarNav .navbar-nav .nav-item .tombol {
+  display: inline-block;
+  background-color: #ED7D2B;
+  color: white;
+  border-radius: 2em;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: 0.4s ease;
+}
+
+.costum-nav #navbarNav .navbar-nav .nav-item .tombol:hover {
+  color: #ED7D2B;
+  border: 1px solid #ED7D2B;
+  background-color: transparent;
+}
+
+.costum-nav #navbarNav .navbar-nav .nav-item .tombol-2 {
+  display: inline-block;
+  background-color: #ED7D2B;
+  color: white;
+  border-radius: 4em;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: 0.4s ease;
+}
+
+.costum-nav #navbarNav .navbar-nav .nav-item .tombol-2:hover {
+  color: #ED7D2B;
+  border: 1px solid #ED7D2B;
+  background-color: #FCECDB;
+}
+
+.costum-nav #navbarNav .navbar-nav .nav-item .tombol-3 {
+  display: inline-block;
+  border-radius: 4em;
+  color: #ED7D2B;
+  border: 1.5px solid #ED7D2B;
+  background-color: #FCECDB;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  transition: 0.4s ease;
+}
+
+.costum-nav #navbarNav .navbar-nav .nav-item .tombol-3:hover {
+  background-color: #FF9843;
+  color: white;
+  border: 1.5px solid white;
+}
+
+.section-utama {
+  margin-top: 6.5em;
+}
+
+.section-utama h2 {
+  font-weight: 700;
+  font-size: 3.9rem;
+  color: #ED7D2B;
+  line-height: 0.8;
+}
+
+.section-utama h4 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: #EFCBAB;
+  line-height: 0.8;
+}
+
+.section-utama h5 {
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: #AFCDFB;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.section-utama p {
+  color: #2E3552;
+  font-size: 1.1rem;
+  margin-top: 1em;
+}
+
+.section-utama a {
+  display: inline-block;
+  background-color: #ED7D2B;
+  color: white;
+  border-radius: 2em;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: 0.4s ease;
+  margin-top: 0.5em;
+}
+
+.section-utama a:hover {
+  color: #ED7D2B;
+  border: 1px solid #ED7D2B;
+  background-color: transparent;
+}
+
+.sourcefreepik {
+  font-size: 0.3rem;
+  color: darkgrey;
+}
+
+form .form-control {
+  background-color: #EBF3FA;
+}
+
+.row ul li {
+  background-color: #FCECDB;
+}
+
+.belumdaftar {
+  font-size: 0.8rem;
+  color: #ED7D2B;
+}
+
+.card .card-header {
+  background-color: #FCECDB;
+  font-size: 2rem;
+  color: #ED7D2B;
+}
+
+.identitas ul li {
+  text-align: left;
+}
+
+.identitas ul li span {
+  text-align: right;
+}
+
+.black {
+  color: #2E3552;
+}
+
+.white {
+  color: white;
+}
+
+.bg-biru1 {
+  background-color: #2B478B;
+}
+
+.bg-biru2 {
+  background-color: #739AF0;
+}
+
+.bg-biru3 {
+  background-color: #5486D6;
+}
+
+.bg-biru4 {
+  background-color: #AFCDFB;
+}
+
+.bg-oren {
+  background-color: #FF9843;
+}
+
+.bg-oren2 {
+  background-color: #EFCBAB;
+}
+
+.bg-oren3 {
+  background-color: #FCECDB;
+}
+
+.toren {
+  color: #FF9843;
+}
+
+.toren2 {
+  color: #EFCBAB;
+}
+
+.toren3 {
+  color: #FCECDB;
+}
+
+.torentua {
+  color: #ED7D2B;
+}
+
+.tombol-2 {
+  display: inline-block;
+  background-color: #ED7D2B;
+  color: white;
+  border-radius: 4em;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  border: 1.5px solid transparent;
+  transition: 0.4s ease;
+}
+
+.tombol-2:hover {
+  color: #ED7D2B;
+  border: 1.5px solid #ED7D2B;
+  background-color: #FCECDB;
+}
+
+.tombol-3 {
+  display: inline-block;
+  border-radius: 4em;
+  color: #ED7D2B;
+  border: 1.5px solid #ED7D2B;
+  background-color: #FCECDB;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  transition: 0.4s ease;
+}
+
+.tombol-3:hover {
+  background-color: #FF9843;
+  color: white;
+  border: 1.5px solid white;
+}
+
+.tombol-kotak {
+  color: #ED7D2B;
+  background-color: #FCECDB;
+  transition: 0.4s ease;
+}
+
+.tombol-kotak:hover {
+  color: white;
+  background-color: #ED7D2B;
+}
+
+.tombol-kotak2 {
+  color: #FCECDB;
+  background-color: #ED7D2B;
+  transition: 0.4s ease;
+}
+
+.tombol-kotak2:hover {
+  color: #ED7D2B;
+  background-color: #FCECDB;
+}
+
+.tombol-kotak-biru {
+  color: white;
+  background-color: #2B478B;
+  transition: 0.4s ease;
+}
+
+.tombol-kotak-biru:hover {
+  color: #2B478B;
+  background-color: #AFCDFB;
+}
+

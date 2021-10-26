@@ -1,0 +1,42 @@
+.bgijo1 {
+  background-color: #937D14 !important;
+}
+.ijo1 {
+  color: #937D14 !important;
+}
+
+.bgijo2 {
+	background-color: #698474;
+}
+.ijo2 {
+	color: #698474;
+}
+
+.bgijo3 {
+	background-color: #41533b;
+}
+.ijo3 {
+  color: #41533b;
+}
+
+.kuning {
+	background-color: #ecb807;
+}
+
+.abu {
+	background-color: #323232;
+}
+
+.putih {
+	color: white;
+}
+
+/*navbar*/
+.masthead {
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.bayangan {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.58);
+}

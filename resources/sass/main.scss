@@ -1,0 +1,341 @@
+// Font 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap');
+
+// Variables
+$primaryColor: #ED7D2B;
+$secondaryColor: #EBF3FA;
+$tertiaryColor: #5486D6;
+$light: #f8f9fa;
+$birutua:#2B478B;
+$birusedang:#739AF0;
+$birumuda: #AFCDFB;
+$orentua: #EFCBAB;
+$orensedang: #FF9843;
+$orenmuda: #FCECDB;
+$textColor: #2E3552;
+
+// Mixin
+@mixin tombol {
+    display: inline-block;
+    background-color: $primaryColor;
+    color: white;
+    border-radius: 2em;
+    padding: 0.5em 2em;
+    text-decoration: none;
+
+    border: 1px solid transparent;
+    transition: 0.4s ease;
+    &:hover {
+        color: $primaryColor;
+        border: 1px solid $primaryColor;
+        background-color: transparent;
+    }
+}
+
+// Class-class tambahan
+.orenjudul {
+    font-weight: 700;
+    font-size: 3rem;
+    color: $primaryColor;
+    // white-space: nowrap;
+    line-height: 1em;
+}
+
+.birusubjudul {
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: $textColor;
+    // white-space: nowrap;
+    line-height: 1.5;
+}
+
+.tombol {
+    @include tombol;
+}
+
+// Tampilan dibawah 992 (mobile)
+@media screen and (max-width: 992px) {
+    
+}
+
+// Styles
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bg {
+    float: right;
+    width: 57vmax;
+    height: auto;
+}
+
+// Navigation Bar
+.costum-nav {
+    background-color: $secondaryColor;
+    .navbar-brand {
+        img {
+            width: 40px;
+            height: 40px;
+            margin-top: -5px;
+        }
+        span {
+            color: white;
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin-left: 0.4em;
+        }
+    }
+
+    #navbarNav {
+        .navbar-nav {
+            .lengkung {
+                border-radius: 30%;
+            }
+            .nav-item {
+                .nav-link {
+                    color: white;
+                    font-weight: 400;
+                    margin-left: 1em;
+                    transition: .3s color ease;
+                    &:hover {
+                        color: darken($primaryColor, 30%);
+                    }
+                }
+                .tombol {
+                    @include tombol;
+                }
+                .tombol-2 {
+                    display: inline-block;
+                    background-color: $primaryColor;
+                    color: white;
+                    border-radius: 4em;
+                    padding: 0.5em 2em;
+                    text-decoration: none;
+
+                    border: 1px solid transparent;
+                    transition: 0.4s ease;
+                    &:hover {
+                        color: $primaryColor;
+                        border: 1px solid $primaryColor;
+                        background-color: $orenmuda;
+                    }
+                }
+                .tombol-3 {
+                    display: inline-block;
+                    border-radius: 4em;
+                    color: $primaryColor;
+                    border: 1.5px solid $primaryColor;
+                    background-color: $orenmuda;
+                    padding: 0.5em 2em;
+                    text-decoration: none;
+                    transition: 0.4s ease;
+                    &:hover {
+                        background-color: $orensedang;
+                        color: white;
+                        border: 1.5px solid white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Tulisan Utama
+.section-utama {
+    margin-top: 6.5em;
+    h2 {
+        font-weight: 700;
+        font-size: 3.9rem;
+        color: $primaryColor;
+        // white-space: nowrap;
+        line-height: 0.8;
+    }
+
+    h4 {
+        font-weight: 700;
+        font-size: 2.8rem;
+        color: $orentua;
+        // white-space: nowrap;
+        line-height: 0.8;
+    }
+
+    h5 {
+        font-weight: 400;
+        font-size: 2.4rem;
+        color: $birumuda;
+        white-space: nowrap;
+        line-height: 1;
+    }
+
+    p {
+        color: $textColor;
+        font-size: 1.1rem;
+        margin-top: 1em;
+    }
+
+    a {
+        @include tombol;
+        margin-top: 0.5em;
+    }
+}
+.sourcefreepik {
+    font-size: 0.3rem;
+    color: darkgrey;
+}
+
+// HALAMAN FORM
+form {
+    .form-control {
+        background-color: $secondaryColor;
+    }
+}
+
+.row {
+    ul {
+        li {
+            background-color: $orenmuda
+        }
+    }
+}
+
+// HALAMAN LOGIN
+.belumdaftar {
+    font-size: 0.8rem;
+    color: $primaryColor;
+}
+.card {
+    .card-header {
+        background-color: $orenmuda;
+        font-size: 2rem;
+        color: $primaryColor;
+    }
+}
+
+// HALAMAN PARTIALS IDENTITAS
+.identitas {
+    ul {
+        li {
+            text-align: left;
+            span {
+                text-align: right;
+            }
+        }
+    }
+}
+
+.black {
+    color: #2E3552;
+}
+
+.white {
+    color: white;
+}
+
+.bg-biru1 {
+    background-color: $birutua;
+}
+
+.bg-biru2 {
+    background-color: $birusedang;
+}
+
+.bg-biru3 {
+    background-color: $tertiaryColor;
+}
+
+.bg-biru4 {
+    background-color: $birumuda;
+}
+
+
+.bg-oren {
+    // background-color: $primaryColor;
+    background-color: $orensedang
+}
+
+.bg-oren2 {
+    background-color: $orentua;
+}
+
+.bg-oren3 {
+    background-color: $orenmuda;
+}
+
+.toren {
+    color: $orensedang;
+}
+
+.toren2 {
+    color: $orentua;
+}
+
+.toren3 {
+    color: $orenmuda;
+}
+
+.torentua {
+    color: $primaryColor;
+}
+
+.tombol-2 {
+    display: inline-block;
+    background-color: $primaryColor;
+    color: white;
+    border-radius: 4em;
+    padding: 0.5em 2em;
+    text-decoration: none;
+
+    border: 1.5px solid transparent;
+    transition: 0.4s ease;
+    &:hover {
+        color: $primaryColor;
+        border: 1.5px solid $primaryColor;
+        background-color: $orenmuda;
+    }
+}
+
+.tombol-3 {
+    display: inline-block;
+    border-radius: 4em;
+    color: $primaryColor;
+    border: 1.5px solid $primaryColor;
+    background-color: $orenmuda;
+    padding: 0.5em 2em;
+    text-decoration: none;
+    transition: 0.4s ease;
+    &:hover {
+        background-color: $orensedang;
+        color: white;
+        border: 1.5px solid white;
+    }
+}
+
+.tombol-kotak {
+    color: $primaryColor;
+    background-color: $orenmuda;
+    transition: 0.4s ease;
+    &:hover {
+        color: white;
+        background-color: $primaryColor;
+    }
+}
+
+.tombol-kotak2 {
+    color: $orenmuda;
+    background-color: $primaryColor;
+    transition: 0.4s ease;
+    &:hover {
+        color: $primaryColor;
+        background-color: $orenmuda;
+    }
+}
+
+.tombol-kotak-biru {
+    color: white;
+    background-color: $birutua;
+    transition: 0.4s ease;
+    &:hover {
+        color: $birutua;
+        background-color: $birumuda;
+    }
+}

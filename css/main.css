@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap");
+.orenjudul {
+  font-weight: 700;
+  font-size: 3rem;
+  color: #ED7D2B;
+  line-height: 1em;
+}
+
+.birusubjudul {
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #EFCBAB;
+  line-height: 1;
+}
+
+.tombol {
+  display: inline-block;
+  background-color: #ED7D2B;
+  color: white;
+  border-radius: 2em;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  border: 1px solid transparent;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.tombol:hover {
+  color: #ED7D2B;
+  border: 1px solid #ED7D2B;
+  background-color: transparent;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bg {
+  float: right;
+  width: 60vmax;
+  height: auto;
+}
+
+.costum-nav {
+  background-color: #EBF3FA;
+}
+
+.costum-nav .navbar-brand img {
+  width: 40px;
+  height: 40px;
+  margin-top: -5px;
+}
+
+.costum-nav .navbar-brand span {
+  color: #ED7D2B;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-left: 0.4em;
+}
+
+.costum-nav #navbarNav .navbar-nav .nav-item .nav-link {
+  color: #ED7D2B;
+  font-weight: 400;
+  margin-left: 1em;
+  -webkit-transition: .3s color ease;
+  transition: .3s color ease;
+}
+
+.costum-nav #navbarNav .navbar-nav .nav-item .nav-link:hover {
+  color: #75370a;
+}
+
+.costum-nav #navbarNav .navbar-nav .nav-item .tombol {
+  display: inline-block;
+  background-color: #ED7D2B;
+  color: white;
+  border-radius: 2em;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  border: 1px solid transparent;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.costum-nav #navbarNav .navbar-nav .nav-item .tombol:hover {
+  color: #ED7D2B;
+  border: 1px solid #ED7D2B;
+  background-color: transparent;
+}
+
+.section-utama {
+  margin-top: 6.5em;
+}
+
+.section-utama h2 {
+  font-weight: 700;
+  font-size: 3.9rem;
+  color: #ED7D2B;
+  line-height: 0.8;
+}
+
+.section-utama h4 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: #EFCBAB;
+  line-height: 0.8;
+}
+
+.section-utama h5 {
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: #AFCDFB;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.section-utama p {
+  color: #2E3552;
+  font-size: 1.1rem;
+  margin-top: 1em;
+}
+
+.section-utama a {
+  display: inline-block;
+  background-color: #ED7D2B;
+  color: white;
+  border-radius: 2em;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  border: 1px solid transparent;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  margin-top: 0.5em;
+}
+
+.section-utama a:hover {
+  color: #ED7D2B;
+  border: 1px solid #ED7D2B;
+  background-color: transparent;
+}
+
+.sourcefreepik {
+  font-size: 0.3rem;
+  color: darkgrey;
+}
+
+form .form-control {
+  background-color: #EBF3FA;
+}
+
+.row ul li {
+  background-color: #FCECDB;
+}
+
+.belumdaftar {
+  font-size: 0.8rem;
+  color: #ED7D2B;
+}
+
+.card .card-header {
+  background-color: #FCECDB;
+  font-size: 2rem;
+  color: #ED7D2B;
+}
+
+.identitas ul li {
+  text-align: left;
+}
+
+.identitas ul li span {
+  text-align: right;
+}
+
+.black {
+  color: #2E3552;
+}
+
+.bg-oren {
+  background-color: #ED7D2B;
+}
+/*# sourceMappingURL=main.css.map */
