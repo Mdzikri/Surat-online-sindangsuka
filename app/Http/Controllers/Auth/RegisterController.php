@@ -95,6 +95,7 @@ class RegisterController extends Controller
             'rw_id' => $data['rw_id'],
             'alamat' => $data['alamat'],
             'kewarganegaraan' => $data['kewarganegaraan'],
+            'status_verifikasi' => 0,
             'password' => Hash::make($data['password']),
         ]);
     }

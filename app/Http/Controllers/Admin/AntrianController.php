@@ -31,6 +31,13 @@ class AntrianController extends Controller
         return view('admin.antrian.index', ['antrian' => $antrian, 'desa' => $desa]);
     }
 
+    public function persurat($jenis)
+    {
+        $desa = Desa::get()->first();
+        $antrian = Ajuan::where('acc', 0)->where('jenis', $jenis)->oldest()->paginate(10);
+        return view('admin.antrian.index', ['antrian' => $antrian, 'desa' => $desa]);
+    }
+
 
     public function show($id)
     {

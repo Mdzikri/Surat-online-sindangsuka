@@ -10,8 +10,8 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('rt_id')->nullable();
-            $table->foreignId('rw_id')->nullable();
+            $table->foreignId('rt_id')->default("0")->nullable();
+            $table->foreignId('rw_id')->default("0")->nullable();
             $table->string('nama');
             $table->string('nik')->unique();
             $table->string('no_kk');

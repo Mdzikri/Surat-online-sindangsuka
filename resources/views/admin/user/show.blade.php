@@ -91,7 +91,7 @@
                       <div class="form-group">
                         <label for="rt_id" class="">RT</label>
                         <div class="">
-                            <select name="rt_id" class="custom-select d-block w-100 select" id="rt_id">
+                            {{-- <select name="rt_id" class="custom-select d-block w-100 select" id="rt_id">
                             @foreach ($rt as $t)
                                 <option value="{{ $t->id }}">RT.{{ $t->no }}/RW.{{ $t->rw->no }}</option>
                             @endforeach
@@ -100,7 +100,7 @@
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
-                            @enderror
+                            @enderror --}}
                         </div>
                       </div>
                     </div>
@@ -108,7 +108,7 @@
                       <div class="form-group">
                         <label for="rw_id" class="">RW</label>
                         <div class="">
-                            <select name="rw_id" class="custom-select d-block w-100 select" id="rw_id">
+                            {{-- <select name="rw_id" class="custom-select d-block w-100 select" id="rw_id" value={{ $rtnya->no }}>
                             @foreach ($rw as $w)
                                 <option value="{{ $w->id }}">RW.{{ $w->no }}</option>
                             @endforeach
@@ -117,7 +117,7 @@
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
-                            @enderror
+                            @enderror --}}
                         </div>
                       </div>
                     </div>
@@ -232,7 +232,33 @@
               </div>
               <hr>
               <div class="button-container">
-                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#hapusUser">Non-Aktifkan User</button>
+                @if ($user->status_verifikasi == 0)
+                  <form action="{{ route('user.verifikasi', $user->id) }}" method="post" class="d-inline">
+                    @csrf
+                    @method('patch')
+                    <button type="submit" class="btn btn-primary">Verifikasi Penduduk</button>
+                  </form>
+                @else
+                  <form action="{{ route('user.nonaktifkan', $user->id) }}" method="post" class="d-inline">
+                    @csrf
+                    @method('patch')
+                    <button type="submit" class="btn btn-danger">Non-aktifkan Penduduk</button>
+                  </form>
+                  <hr>
+                  <form action="{{ route('admin.reset.password', $user->id) }}" method="post" class="d-inline">
+                    @csrf
+                    @method('patch')
+                    <div class="form-group">
+                      <div class="mr-3 ml-3">
+                        <label>Reset Password</label>
+                        <input type="password" name="password" class="form-control" value="">
+                        @error('password') <div class="text-danger mt-1"> <small>{{$message}}</small> </div> @enderror
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-warning">Reset Password</button>
+                  </form>
+                @endif
+                {{-- <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#hapusUser">Non-Aktifkan Penduduk</button> --}}
               </div>
             </div>
           </div>

@@ -10,7 +10,8 @@ class CreateRtsTable extends Migration
     {
         Schema::create('rts', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('rw_id')->constrained('rws');
+            // $table->foreignId('rw_id')->constrained('rws');
+            $table->foreignId('rw_id')->references('id')->on('rws')->onDelete('cascade');
             $table->string('no');
             $table->string('ketua')->nullable();
             $table->timestamps();

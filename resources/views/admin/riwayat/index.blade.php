@@ -25,29 +25,57 @@
                                 <th class="text-right"><b>Opsi</b></th>
                             </thead>
                             <tbody>
-                            @foreach ($riwayat as $surat)
-                            <tr>
-                                <td>{{ $surat->user->nama }}</td>
-                                <td>{{ $surat->jenis }}</td>
-                                <td>{{ $surat->created_at->format('d M Y') }}</td>
-                                <td>{{ $surat->updated_at->format('d M Y') }}</td>
-                                <td>
-                                    @if ($surat->acc == 1)
-                                        <span class="text-success"><b>Diterima</b></span>
-                                    @elseif ($surat->acc == 2)
-                                        <span class="text-danger"><b>Ditolak</b></span>
+                            @role('admin')
+                                @foreach ($riwayat as $surat)
+                                    @if ($surat->user->rt->no == Auth::user()->rt->no)
+                                        <tr>
+                                            <td>{{ $surat->user->nama }}</td>
+                                            <td>{{ $surat->jenis }}</td>
+                                            <td>{{ $surat->created_at->format('d M Y') }}</td>
+                                            <td>{{ $surat->updated_at->format('d M Y') }}</td>
+                                            <td>
+                                                @if ($surat->acc == 1)
+                                                    <span class="text-success"><b>Diterima</b></span>
+                                                @elseif ($surat->acc == 2)
+                                                    <span class="text-danger"><b>Ditolak</b></span>
+                                                @endif
+                                            </td>
+                                            <td class="text-right">
+                                                @if ($surat->acc == 1)
+                                                    <a href="{{ route('adm.lihat', $surat->id) }}" class="badge badge-warning">Lihat</a>
+                                                @elseif ($surat->acc == 2)
+                                                    <a href="" class="badge badge-warning">Lihat</a>
+                                                @endif
+                                            </td>
+                                        </tr>
                                     @endif
-                                </td>
-                                {{-- <td>{{ $surat->penindak }}</td> --}}
-                                <td class="text-right">
-                                    @if ($surat->acc == 1)
-                                        <a href="{{ route('adm.lihat', $surat->id) }}" class="badge badge-warning">Lihat</a>
-                                    @elseif ($surat->acc == 2)
-                                        <a href="" class="badge badge-warning">Lihat</a>
-                                    @endif
-                                </td>
-                            </tr>
-                            @endforeach
+                                @endforeach
+                            @endrole
+                            @role('superadmin')
+                                @foreach ($riwayat as $surat)
+                                <tr>
+                                    <td>{{ $surat->user->nama }}</td>
+                                    <td>{{ $surat->jenis }}</td>
+                                    <td>{{ $surat->created_at->format('d M Y') }}</td>
+                                    <td>{{ $surat->updated_at->format('d M Y') }}</td>
+                                    <td>
+                                        @if ($surat->acc == 1)
+                                            <span class="text-success"><b>Diterima</b></span>
+                                        @elseif ($surat->acc == 2)
+                                            <span class="text-danger"><b>Ditolak</b></span>
+                                        @endif
+                                    </td>
+                                    {{-- <td>{{ $surat->penindak }}</td> --}}
+                                    <td class="text-right">
+                                        @if ($surat->acc == 1)
+                                            <a href="{{ route('adm.lihat', $surat->id) }}" class="badge badge-warning">Lihat</a>
+                                        @elseif ($surat->acc == 2)
+                                            <a href="" class="badge badge-warning">Lihat</a>
+                                        @endif
+                                    </td>
+                                </tr>
+                                @endforeach
+                            @endrole
                             </tbody>
                         </table>
                     </div>

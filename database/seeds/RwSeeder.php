@@ -13,8 +13,7 @@ class RwSeeder extends Seeder
     public function run()
     {
         Rw::create([
-            'no' => '15',
-            'ketua' => 'Cokro',
+            'no' => '01',
         ]);
     }
 }

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Super;
 
 use App\Rt;
+use App\Rw;
+use App\Desa;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -10,61 +12,71 @@ use App\Http\Controllers\Controller;
 
 class RtController extends Controller
 {
-    public function index()
-    {
-        //
-    }
-
-    public function create()
-    {
-        //
-    }
-
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
         $data = $request->validate([
-            'rw_id' => 'required',
             'no' => 'required',
-            'ketua' => 'required',
         ]);
-
-        // Tambah Ketua RT
-        $nik = $data['ketua'];
-        $ketua = User::where('nik', $nik)->first();
-        if (!isset($ketua)) {
-            return redirect()->back()->with('status', 'ketua RT belum melakukan pendaftaran pada website ini. silahkan yang bersangkutan untuk registrasi terlebih dahulu!')->with('warna', 'alert-danger');
-        }
-        $data['ketua'] = $ketua->nama;
-
-        // pengulangan membuat no rt
-        // $jumlah_rt = $data['jumlah_rt'];
-        // for ($i = 1; $i == $jumlah_rt; $i++) {
-        //     Rt::create([
-        //         'rw_id' => $data['rw_id'],
-        //         'no' => $i,
-        //     ]);
-        // }
+        $data['rw_id'] = $id;
         Rt::create($data);
         return redirect()->back();
     }
 
-    public function show(Rt $rt)
+    public function edit($id)
     {
-        //
+        $desa = Desa::get()->first();
+        $user = User::get();
+        $rt = Rt::get()->where('id', $id)->first();
+        $ketua = User::where('id', $rt->ketua)->first();
+
+
+        if (isset($rt->ketua)) {
+            $pilihan = 0;
+        } else {
+            $pilihan = 1;
+        }
+
+        return view('super.rt-rw.edit-rt', compact(['pilihan', 'user', 'rt', 'ketua', 'desa', 'user']));
     }
 
-    public function edit(Rt $rt)
+    public function ganti($id)
     {
-        //
+        $desa = Desa::get()->first();
+        $user = User::get();
+        $rt = Rt::get()->where('id', $id)->first();
+        $ketua = User::where('id', $rt->ketua)->first();
+
+        $pilihan = 2;
+
+        return view('super.rt-rw.edit-rt', compact(['pilihan', 'user', 'rt', 'ketua', 'desa', 'user']));
     }
 
-    public function update(Request $request, Rt $rt)
+    public function updateKetua(Request $request, $id)
     {
-        echo "Updated";
+        $rt = Rt::get()->where('id', $id)->first();
+        $data = $request->validate([
+            'ketua' => 'required',
+        ]);
+
+        $rt->update($data);
+        // return redirect()->back();
+        return redirect(route('rt.edit', $rt));
     }
 
-    public function destroy(Rt $rt)
+    public function updateNo(Request $request, Rt $rt)
     {
-        echo "Destroy";
+        $data = $request->validate([
+            'no' => 'required',
+        ]);
+
+        $rt->update($data);
+        return redirect()->back();
+    }
+
+    public function destroy($id)
+    {
+        $rt = Rt::where('id', $id);
+        $rt->update(['no' => "-"]);
+        return redirect()->back();
     }
 }

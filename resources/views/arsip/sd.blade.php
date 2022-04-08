@@ -121,6 +121,9 @@
                 dipergunakan sebagaimana mestinya.
             </td>
         </tr>
+        <td>
+            <font size="1"> surat keterangan ini berlaku dari {{ $ajuan->updated_at->format('d F Y') }} hingga satu bulan kedepan  </font>
+        </td>
     </table>
 
     <br><br>

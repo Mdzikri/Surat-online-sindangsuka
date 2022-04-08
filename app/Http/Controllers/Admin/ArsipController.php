@@ -98,6 +98,6 @@ class ArsipController extends Controller
     // LAPORAN
     public function laporan()
     {
-        return Excel::download(new AjuansExport, 'surat-keluar.xlsx');
+        return Excel::download(new AjuansExport, 'surat keluar maret.xlsx');
     }
 }

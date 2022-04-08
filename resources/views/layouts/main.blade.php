@@ -93,7 +93,7 @@
                           Pengaturan Akun
                       </a>
                       @role('admin|superadmin')
-                      <a class="dropdown-item" href="{{ route('antrian.index') }}">
+                      <a class="dropdown-item" href="{{ route('admin.dashboard') }}">
                           Dashboard Admin
                       </a>
                       @endrole

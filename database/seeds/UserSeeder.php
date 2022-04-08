@@ -25,7 +25,7 @@ class UserSeeder extends Seeder
             'rw_id' => '1',
             'alamat' => 'Garut',
             'kewarganegaraan' => 'Indonesia',
-            'password' => bcrypt('password'),
+            'password' => bcrypt('Des4kAryamukTISprAdm'),
         ]);
         $superadmin->assignRole('superadmin');
 
@@ -45,7 +45,7 @@ class UserSeeder extends Seeder
             'rw_id' => '1',
             'alamat' => 'Garut',
             'kewarganegaraan' => 'Indonesia',
-            'password' => bcrypt('password'),
+            'password' => bcrypt('Des4kAryamukTI'),
         ]);
         $admin1->assignRole('admin');
 
@@ -65,7 +65,7 @@ class UserSeeder extends Seeder
             'rw_id' => '1',
             'alamat' => 'Garut',
             'kewarganegaraan' => 'Indonesia',
-            'password' => bcrypt('password'),
+            'password' => bcrypt('Des4kAryamukTI'),
         ]);
         $admin2->assignRole('admin');
 

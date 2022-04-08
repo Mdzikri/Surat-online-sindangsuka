@@ -50,6 +50,8 @@
               <p>Surat Belum di Acc</p>
             </a>
           </li>
+
+
           <li class="{{ request()->is('surat') ? 'active' : '' }}">
             <a href="{{ route('surat.index') }}">
               <i class="fa fa-file"></i>
@@ -84,7 +86,7 @@
           <li class="{{ request()->is('user') ? 'active' : '' }}">
             <a href="{{ route('user.index') }}">
               <i class="fa fa-id-card"></i>
-              <p>Kelola User</p>
+              <p>Data Penduduk</p>
             </a>
           </li>
           <li class="{{ request()->is('riwayat-pengajuan') ? 'active' : '' }}">

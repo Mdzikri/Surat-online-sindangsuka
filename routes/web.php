@@ -49,6 +49,7 @@ Route::middleware('auth', 'verifikasi_user')->group(function () {
 Route::group(['middleware' => ['can:setingumum', 'verifikasi_user']], function () {
     // dashboard
     Route::get('/dashboard-adm', 'Admin\DashboardController@index')->name('admin.dashboard');
+    Route::get('/persurat/{surat:jenis}', 'Admin\AntrianController@persurat')->name('admin.persurat');
     // Kelola User
     Route::get('/user', 'Admin\PendudukController@index')->name('user.index');
     Route::get('/user/{user:id}', 'Admin\PendudukController@show')->name('user.show');
@@ -60,6 +61,11 @@ Route::group(['middleware' => ['can:setingumum', 'verifikasi_user']], function (
     Route::get('/adm-suket/{a:id}', 'Admin\ArsipController@lihat')->name('adm.lihat');
     // Daftar Pengajuan
     Route::get('/riwayat-pengajuan', 'Admin\RiwayatController@index')->name('riwayat.index');
+    // Verifikasi User
+    Route::patch('/verifikasi-user/{user:id}', 'Admin\PendudukController@verifikasi')->name('user.verifikasi');
+    Route::patch('/nonAktifkan-user/{user:id}', 'Admin\PendudukController@nonAktifkan')->name('user.nonaktifkan');
+    // Reset Password
+    Route::patch('/reset-password/{user:id}', 'Admin\PendudukController@resetPassword')->name('admin.reset.password');
 });
 
 Route::group(['middleware' => ['role:superadmin', 'verifikasi_user']], function () {
@@ -115,12 +121,20 @@ Route::group(['middleware' => ['role:superadmin', 'verifikasi_user']], function 
     Route::patch('/logo-desa/{desa:id}', 'Super\DesaController@logo')->name('desa.logo');
     // Kelola RT dan RW
     Route::get('/rt-rw', 'Super\RwController@index')->name('rt-rw.index');
-    Route::patch('/rt/update/{t:id}', 'Super\RtController@update')->name('rt.update');
-    Route::patch('/rw/update/{t:id}', 'Super\RwController@update')->name('rw.update');
-    Route::delete('/rw/delete/{t:id}', 'Super\RwController@destroy')->name('rt.delete');
+    Route::get('/rw/edit/{t:id}', 'Super\RwController@edit')->name('rw.edit');
+    Route::get('/rt/edit/{t:id}', 'Super\RtController@edit')->name('rt.edit');
+    Route::patch('/rt/update-ketua/{t:id}', 'Super\RtController@updateKetua')->name('rt.update-ketua');
+    Route::patch('/rw/update-ketua/{rw:id}', 'Super\RwController@updateKetua')->name('rw.update-ketua');
+    Route::patch('/rw/update-no/{rw:id}', 'Super\RwController@updateNo')->name('rw.update-no');
+    Route::patch('/rt/update-no/{rt:id}', 'Super\RtController@updateNo')->name('rt.update-no');
+    Route::get('/rw/ganti/{rw:id}', 'Super\RwController@ganti')->name('rw.ganti');
+    Route::get('/rt/ganti/{rt:id}', 'Super\RtController@ganti')->name('rt.ganti');
+    Route::patch('/rw/ganti-ketua/{rw:id}', 'Super\RwController@gantiKetua')->name('rw.ganti-ketua');
+    Route::patch('/rt/ganti-ketua/{rt:id}', 'Super\RtController@gantiKetua')->name('rt.ganti-ketua');
+    Route::delete('/rt/delete/{t:id}', 'Super\RtController@destroy')->name('rt.delete');
     Route::delete('/rw/delete/{t:id}', 'Super\RwController@destroy')->name('rw.delete');
     Route::post('/rw', 'Super\RwController@store')->name('rw.store');
-    Route::post('/rt', 'Super\RtController@store')->name('rt.store');
+    Route::post('/rt/{rw_id}', 'Super\RtController@store')->name('rt.store');
     // laporan Excel
     Route::get('/arsip-laporan', 'Admin\ArsipController@laporan')->name('arsip.laporan');
 });

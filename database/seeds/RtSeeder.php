@@ -14,8 +14,7 @@ class RtSeeder extends Seeder
     {
         Rt::create([
             'rw_id' => '1',
-            'no' => '11',
-            'ketua' => 'Samanhudi',
+            'no' => '01',
         ]);
     }
 }

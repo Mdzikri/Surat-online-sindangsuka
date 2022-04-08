@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 02 Nov 2021 pada 04.22
+-- Waktu pembuatan: 04 Nov 2021 pada 10.26
 -- Versi server: 10.1.39-MariaDB
 -- Versi PHP: 7.3.5
 
@@ -137,8 +137,8 @@ CREATE TABLE `kades` (
 --
 
 INSERT INTO `kades` (`id`, `nama`, `nik`, `ttl`, `agama`, `jk`, `alamat`, `jabatan`, `periode`, `ttdcap`, `fotokades`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Ade Rustiana', '1349810350', 'Bandung, 4 Mei 1970', 'Islam', 'Laki-laki', 'Kp. Kopeng RT 01/01', 'Kepala Desa', '2015-2020', 'ttd1.png', 'default.jpeg', 1, '2021-11-01 04:11:47', '2021-11-01 04:11:47'),
-(2, 'Turnawan', '1349810351', 'Garut, 4 April 1953', 'Islam', 'Laki-laki', 'Kp. Kopeng RT 02/02', 'Kepala Desa', '2010-2015', NULL, 'default.jpeg', 0, '2021-11-01 04:11:47', '2021-11-01 04:11:47');
+(1, 'Ade Rustiana', '1349810350', 'Bandung, 4 Mei 1970', 'Islam', 'Laki-laki', 'Kp. Kopeng RT 01/01', 'Kepala Desa', '2015-2020', 'ttd1.png', 'default.jpeg', 1, '2021-11-04 02:05:00', '2021-11-04 02:05:00'),
+(2, 'Turnawan', '1349810351', 'Garut, 4 April 1953', 'Islam', 'Laki-laki', 'Kp. Kopeng RT 02/02', 'Kepala Desa', '2010-2015', NULL, 'default.jpeg', 0, '2021-11-04 02:05:00', '2021-11-04 02:05:00');
 
 -- --------------------------------------------------------
 
@@ -158,10 +158,10 @@ CREATE TABLE `keperluans` (
 --
 
 INSERT INTO `keperluans` (`id`, `keperluan`, `created_at`, `updated_at`) VALUES
-(1, 'Mohon SKCK ke Polres Garut', '2021-11-01 04:11:47', '2021-11-01 04:11:47'),
-(2, 'Perlengkapan Administrasi', '2021-11-01 04:11:47', '2021-11-01 04:11:47'),
-(3, 'Pengajuan Keringanan Biaya Listrik (Listrik Bersubsidi)', '2021-11-01 04:11:47', '2021-11-01 04:11:47'),
-(4, 'Laporan Kematian', '2021-11-01 04:11:47', '2021-11-01 04:11:47');
+(1, 'Mohon SKCK ke Polres Garut', '2021-11-04 02:04:59', '2021-11-04 02:04:59'),
+(2, 'Perlengkapan Administrasi', '2021-11-04 02:04:59', '2021-11-04 02:04:59'),
+(3, 'Pengajuan Keringanan Biaya Listrik (Listrik Bersubsidi)', '2021-11-04 02:04:59', '2021-11-04 02:04:59'),
+(4, 'Laporan Kematian', '2021-11-04 02:04:59', '2021-11-04 02:04:59');
 
 -- --------------------------------------------------------
 
@@ -286,8 +286,8 @@ CREATE TABLE `permissions` (
 --
 
 INSERT INTO `permissions` (`id`, `name`, `guard_name`, `created_at`, `updated_at`) VALUES
-(1, 'setingumum', 'web', '2021-11-01 04:11:47', '2021-11-01 04:11:47'),
-(2, 'lengkap', 'web', '2021-11-01 04:11:47', '2021-11-01 04:11:47');
+(1, 'setingumum', 'web', '2021-11-04 02:04:59', '2021-11-04 02:04:59'),
+(2, 'lengkap', 'web', '2021-11-04 02:04:59', '2021-11-04 02:04:59');
 
 -- --------------------------------------------------------
 
@@ -307,9 +307,9 @@ CREATE TABLE `pesan_penolakans` (
 --
 
 INSERT INTO `pesan_penolakans` (`id`, `isi`, `created_at`, `updated_at`) VALUES
-(1, 'Data yang anda masukan belum benar', '2021-11-01 04:11:47', '2021-11-01 04:11:47'),
-(2, 'Data pengajuan yang anda masukan tidak tepat', '2021-11-01 04:11:47', '2021-11-01 04:11:47'),
-(3, 'Data yang anda masukan tidak sesuai standar aturan desa', '2021-11-01 04:11:47', '2021-11-01 04:11:47');
+(1, 'Data yang anda masukan belum benar', '2021-11-04 02:05:00', '2021-11-04 02:05:00'),
+(2, 'Data pengajuan yang anda masukan tidak tepat', '2021-11-04 02:05:00', '2021-11-04 02:05:00'),
+(3, 'Data yang anda masukan tidak sesuai standar aturan desa', '2021-11-04 02:05:00', '2021-11-04 02:05:00');
 
 -- --------------------------------------------------------
 
@@ -330,11 +330,11 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `name`, `guard_name`, `created_at`, `updated_at`) VALUES
-(1, 'superadmin', 'web', '2021-11-01 04:11:46', '2021-11-01 04:11:46'),
-(2, 'admin', 'web', '2021-11-01 04:11:46', '2021-11-01 04:11:46'),
-(3, 'rw', 'web', '2021-11-01 04:11:46', '2021-11-01 04:11:46'),
-(4, 'rt', 'web', '2021-11-01 04:11:46', '2021-11-01 04:11:46'),
-(5, 'user', 'web', '2021-11-01 04:11:46', '2021-11-01 04:11:46');
+(1, 'superadmin', 'web', '2021-11-04 02:04:56', '2021-11-04 02:04:56'),
+(2, 'admin', 'web', '2021-11-04 02:04:56', '2021-11-04 02:04:56'),
+(3, 'rw', 'web', '2021-11-04 02:04:57', '2021-11-04 02:04:57'),
+(4, 'rt', 'web', '2021-11-04 02:04:57', '2021-11-04 02:04:57'),
+(5, 'user', 'web', '2021-11-04 02:04:57', '2021-11-04 02:04:57');
 
 -- --------------------------------------------------------
 
@@ -370,6 +370,13 @@ CREATE TABLE `rts` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data untuk tabel `rts`
+--
+
+INSERT INTO `rts` (`id`, `rw_id`, `no`, `ketua`, `created_at`, `updated_at`) VALUES
+(1, 1, '01', NULL, '2021-11-04 02:04:57', '2021-11-04 02:04:57');
+
 -- --------------------------------------------------------
 
 --
@@ -389,7 +396,7 @@ CREATE TABLE `rws` (
 --
 
 INSERT INTO `rws` (`id`, `no`, `ketua`, `created_at`, `updated_at`) VALUES
-(2, '02', NULL, '2021-11-01 04:12:18', '2021-11-01 04:12:18');
+(1, '01', NULL, '2021-11-04 02:04:57', '2021-11-04 02:04:57');
 
 -- --------------------------------------------------------
 
@@ -513,8 +520,8 @@ CREATE TABLE `surats` (
 
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `rt_id` bigint(20) UNSIGNED DEFAULT NULL,
-  `rw_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `rt_id` bigint(20) UNSIGNED DEFAULT '0',
+  `rw_id` bigint(20) UNSIGNED DEFAULT '0',
   `nama` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `nik` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `no_kk` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -547,11 +554,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `rt_id`, `rw_id`, `nama`, `nik`, `no_kk`, `ttl`, `agama`, `jk`, `status`, `nama_ibu`, `nama_ayah`, `pendidikan`, `pekerjaan`, `alamat`, `kewarganegaraan`, `password`, `status_verifikasi`, `telp`, `penghasilan`, `pasfoto`, `fotoktp`, `fotokk`, `status_lengkap`, `status_user`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 'Super Admin', 'superadmin', 'superadmin', 'Bandung, 8 September 1999', 'Islam', 'Laki-laki', 'Belum Menikah', 'Pipin', 'Bambang', 'S1/Sederajat', 'Programmer', 'Garut', 'Indonesia', '$2y$10$AWk8rkJ5/bv2XQYnouFWguVRMexBZs9iceKBW0lrHw85owCj4P1ui', 1, NULL, NULL, NULL, NULL, NULL, 0, '1', NULL, '2021-11-01 04:11:46', '2021-11-01 04:11:46'),
-(2, 1, 1, 'Petugas Desa 1', 'admin1', 'admin1', 'Bandung, 8 September 1998', 'Islam', 'Laki-laki', 'Belum Menikah', 'Nina', 'Dadang', 'SMA/Sederajat', 'Pegawai Desa', 'Garut', 'Indonesia', '$2y$10$nNg4EbWZgg.ioWSO0WG2VubC.sQDiATg5ftijgRA2PhrhbzwRxmBe', 1, NULL, NULL, NULL, NULL, NULL, 0, '1', NULL, '2021-11-01 04:11:46', '2021-11-01 04:11:46'),
-(3, 1, 1, 'Petugas Desa 2', 'admin2', 'admin2', 'Bandung, 8 September 1997', 'Islam', 'Perempuan', 'Menikah', 'Sarimin', 'Ujang', 'S1/Sederajat', 'Pegawai Desa', 'Garut', 'Indonesia', '$2y$10$15J/.3/hjxQB0LfHSK4Zf.qSIpQisu6.ia1JB46vsgHMuBGjr9lCG', 1, NULL, NULL, NULL, NULL, NULL, 0, '1', NULL, '2021-11-01 04:11:47', '2021-11-01 04:11:47'),
-(4, 1, 1, 'Penduduk A', '1234567890123456', '1234567890123456', 'Bandung, 8 September 1996', 'Islam', 'Laki-laki', 'Menikah', 'Sarimin', 'Ujang', 'S1/Sederajat', 'Wirausaha', 'Garut', 'Indonesia', '$2y$10$GE44gNCSSN34FX/PKKAmrOyf4hCY29k2p4NI08adxCp5aZxKnY/N2', 1, NULL, NULL, NULL, NULL, NULL, 0, '1', NULL, '2021-11-01 04:11:47', '2021-11-01 04:11:47'),
-(5, 1, 1, 'Penduduk B', '1187050034', '1187050034', 'Bandung, 8 September 1997', 'Islam', 'Perempuan', 'Belum Menikah', 'Sarimin', 'Ujang', 'S1/Sederajat', 'Mahasiswa', 'Garut', 'Indonesia', '$2y$10$MAaaU1q95wjNITAG7OyjQOSKNu4VNsrImZq3he9P4eOtcBHFCcWWe', 1, NULL, NULL, NULL, NULL, NULL, 0, '1', NULL, '2021-11-01 04:11:47', '2021-11-01 04:11:47');
+(1, 1, 1, 'Super Admin', 'superadmin', 'superadmin', 'Bandung, 8 September 1999', 'Islam', 'Laki-laki', 'Belum Menikah', 'Pipin', 'Bambang', 'S1/Sederajat', 'Programmer', 'Garut', 'Indonesia', '$2y$10$TbUhYlybnWZV0H5MWYRG4.SpwWSsKUiGb.GvSXfYyKPHjVuyNrQce', 1, NULL, NULL, NULL, NULL, NULL, 0, '1', NULL, '2021-11-04 02:04:58', '2021-11-04 02:04:58'),
+(2, 1, 1, 'Petugas Desa 1', 'admin1', 'admin1', 'Bandung, 8 September 1998', 'Islam', 'Laki-laki', 'Belum Menikah', 'Nina', 'Dadang', 'SMA/Sederajat', 'Pegawai Desa', 'Garut', 'Indonesia', '$2y$10$8jXm8CqLbTElo5gGVthFt.MtiLjIGOg0yaNj1Jme4yW/yWR.Zw9gC', 1, NULL, NULL, NULL, NULL, NULL, 0, '1', NULL, '2021-11-04 02:04:58', '2021-11-04 02:04:58'),
+(3, 1, 1, 'Petugas Desa 2', 'admin2', 'admin2', 'Bandung, 8 September 1997', 'Islam', 'Perempuan', 'Menikah', 'Sarimin', 'Ujang', 'S1/Sederajat', 'Pegawai Desa', 'Garut', 'Indonesia', '$2y$10$RHmDuymhFuL/LC81x6jPjuea31NCm6TazlDukQf.2/AvXQhcYacDe', 1, NULL, NULL, NULL, NULL, NULL, 0, '1', NULL, '2021-11-04 02:04:59', '2021-11-04 02:04:59'),
+(4, 1, 1, 'Penduduk A', '1234567890123456', '1234567890123456', 'Bandung, 8 September 1996', 'Islam', 'Laki-laki', 'Menikah', 'Sarimin', 'Ujang', 'S1/Sederajat', 'Wirausaha', 'Garut', 'Indonesia', '$2y$10$YcpbALVbBurNXUrNMMvhLuKoiNah2Vqml6RZm/WUS0gNScX476lQG', 1, NULL, NULL, NULL, NULL, NULL, 0, '1', NULL, '2021-11-04 02:04:59', '2021-11-04 02:04:59'),
+(5, 1, 1, 'Penduduk B', '1187050034', '1187050034', 'Bandung, 8 September 1997', 'Islam', 'Perempuan', 'Belum Menikah', 'Sarimin', 'Ujang', 'S1/Sederajat', 'Mahasiswa', 'Garut', 'Indonesia', '$2y$10$iOOZ21qUm4vfREc5fTsbOukG3cslvyMYs0hyYqOWZGwH7cDKEtwkq', 1, NULL, NULL, NULL, NULL, NULL, 0, '1', NULL, '2021-11-04 02:04:59', '2021-11-04 02:04:59');
 
 --
 -- Indexes for dumped tables
@@ -798,13 +805,13 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT untuk tabel `rts`
 --
 ALTER TABLE `rts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `rws`
 --
 ALTER TABLE `rws`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `sds`

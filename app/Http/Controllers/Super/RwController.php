@@ -18,44 +18,98 @@ class RwController extends Controller
         $desa = Desa::get()->first();
         $rw = Rw::get();
         $rt = Rt::get();
-        return view('super.rt-rw.index', compact(['rw', 'rt', 'desa']));
+        $user = User::get();
+        return view('super.rt-rw.index', compact(['rw', 'user', 'rt', 'desa']));
     }
 
     public function store(Request $request)
     {
         $data = $request->validate([
             'no' => 'required',
-            'ketua' => 'required',
         ]);
-        // dump($data['ketua']);
-        $nik = $data['ketua'];
-        $ketua = User::where('nik', $nik)->first();
-        if (!isset($ketua)) {
-            return redirect()->back()->with('status', 'ketua RW belum melakukan pendaftaran pada website ini. silahkan yang bersangkutan untuk registrasi terlebih dahulu!')->with('warna', 'alert-danger');
-        }
-        // dump($ketua);
-
-        $ketua->assignRole('admin');
-
-        $data['ketua'] = $ketua->nama;
 
         Rw::create($data);
         return redirect()->back();
     }
 
-    public function show(Rw $rw)
+    public function edit($id)
     {
-        //
+        $desa = Desa::get()->first();
+        $user = User::get();
+        $rw = Rw::get()->where('id', $id)->first();
+        $rt = Rt::get()->where('rw_id', $id);
+        $ketua = User::where('id', $rw->ketua)->first();
+
+        if (isset($rw->ketua)) {
+            $pilihan = 0;
+        } else {
+            $pilihan = 1;
+        }
+
+        return view('super.rt-rw.edit-rw', compact(['rw', 'pilihan', 'user', 'rt', 'ketua', 'desa', 'user']));
     }
 
-    public function edit(Rw $rw)
+    public function ganti(Request $request, $id)
     {
-        //
+        // $desa = Desa::get()->first();
+        // $user = User::get();
+        // $rw = Rw::get()->where('id', $id)->first();
+        // $rt = Rt::get()->where('rw_id', $id);
+        // $ketua = User::where('id', $rw->ketua)->first();
+
+        // $ketua->removeRole('admin');
+        // $pilihan = 1;
+
+        // $data = $request->validate([
+        //     'ketua' => 'required',
+        // ]);
+
+        // $ketuabaru = User::where('id', $data['ketua'])->first();
+        // $ketuabaru->assignRole('admin');
+
+        // dd($ketuabaru);
+
+        // $rw->update([
+        //     'ketua' => $data['ketua'],
+        // ]);
+
+        // return view('super.rt-rw.edit-rw', compact(['rw', 'pilihan', 'rt', 'ketua', 'desa', 'user']));
+        $desa = Desa::get()->first();
+        $user = User::get();
+        $rw = Rw::get()->where('id', $id)->first();
+        $rt = Rt::get()->where('rw_id', $id);
+        $ketua = User::where('id', $rw->ketua)->first();
+
+        $pilihan = 1;
+        $ketua->removeRole('admin');
+
+        return view('super.rt-rw.edit-rw', compact(['pilihan', 'user', 'rt', 'rw', 'ketua', 'desa', 'user']));
     }
 
-    public function update(Request $request, Rw $rw)
+    public function updateKetua(Request $request, Rw $rw)
     {
-        echo "Updated";
+        $data = $request->validate([
+            'ketua' => 'required',
+        ]);
+
+        $ketua = User::where('id', $data['ketua'])->first();
+        $ketua->assignRole('admin');
+
+        $rw->update([
+            'ketua' => $data['ketua'],
+        ]);
+        // $pilihan = 0;
+        return redirect(route('rw.edit', $rw));
+    }
+
+    public function updateNo(Request $request, Rw $rw)
+    {
+        $data = $request->validate([
+            'no' => 'required',
+        ]);
+
+        $rw->update($data);
+        return redirect()->back();
     }
 
     public function destroy($id)
